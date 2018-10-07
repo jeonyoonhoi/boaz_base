@@ -1,0 +1,17 @@
+#1 grade <- cbind(kor,mat); grade <- as.data.frame(cbind(grade,eng))
+
+#1.1 apply(grade,1,mean)
+
+#1.2  apply(grade, 2, sum)
+
+#1.3 apply(grade, 2, function(x){x*2})
+
+# 2.1  msu_molten <- ms %>% gather(월, 가입자, -구분, -통신사)
+
+# 2.2  통신사별_데이터 <- msu_molten %>% group_by(통신사, 월) %>% summarise(가입자=sum(가입자))
+
+# 2.3  가입구분별_데이터 <- msu_molten %>% group_by(구분, 월) %>% summarise(가입자=sum(가입자))
+
+# 2.4 
+
+	통신사별_3월_합계 <- msu_molten %>% filter(월=="2018.3월") %>% group_by(통신사, 월) %>% summarise(가입자=sum(가입자))
